@@ -64,7 +64,6 @@ Champ & Champ::operator=(Champ &&c) {
 	return *this;
 }
 ostream & Champ::sort_change(ostream &os) {
-	//排序
 	sort(this->pgas.begin(), this->pgas.end(), &compareing);
 	//统计职业选手的得分
 	shared_ptr<map<double, int>> pga_work = make_shared<map<double, int>>();

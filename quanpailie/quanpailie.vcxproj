@@ -170,6 +170,7 @@
     <ClInclude Include="shexingtianshu.h" />
     <ClInclude Include="Sleeping.h" />
     <ClInclude Include="Squares.h" />
+    <ClInclude Include="Symmetry.h" />
     <ClInclude Include="Xiangqi.h" />
   </ItemGroup>
   <ItemGroup>

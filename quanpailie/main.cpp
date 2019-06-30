@@ -14,8 +14,9 @@
 //#include "Squares.h"
 //#include "Morse.h"
 //#include "Sleeping.h"
-#include "Pga.h"
-#include "Champ.h"
+//#include "Pga.h"
+//#include "Champ.h"
+#include "Symmetry.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -35,17 +36,8 @@ using namespace std;
 int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\english.txt";
-	shared_ptr<Champ> c = make_shared<Champ>(p);
-	c->sort_change(cout);
-	//shared_ptr<Pga> pga = make_shared<Pga>("song 70 70 70 70");
-	//auto tup = pga->information();
-	//cout << get<0>(tup) << endl;
-	//for (auto &e : get<1>(tup)) cout << e << " ";
-	//cout << endl;
-	//cout << get<2>(tup) << endl;
-	//cout << get<3>(tup) << endl;
-	//cout << get<4>(tup) << endl;
-	//vector<Pga> pp;
-	//pp.push_back(*pga);
+	vector<vector<double>> m = { {5, 14}, {6, 10}, {5, 10}, {6, 14} };
+	shared_ptr<Symmetry<double>> sym = make_shared<Symmetry<double>>(m);
+	sym->operator()(cout);
 	return 0;
 }

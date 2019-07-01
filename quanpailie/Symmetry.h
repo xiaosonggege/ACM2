@@ -19,7 +19,7 @@ public:
 	Symmetry(Symmetry &&);
 	Symmetry & operator=(const Symmetry &);
 	Symmetry & operator=(Symmetry &&);
-	ostream & operator()(ostream &); //判断是否存在此对称轴
+	ostream & operator()(ostream &) const; //判断是否存在此对称轴
 };
 template <typename T>
 Symmetry<T>::Symmetry(const vector<vector<T>> &zuobiaos) : zuobiao(zuobiaos) {}
@@ -46,7 +46,7 @@ Symmetry<T> & Symmetry<T>::operator=(Symmetry &&s) {
 	return *this;
 }
 template <typename T>
-ostream & Symmetry<T>::operator()(ostream &os) {
+ostream & Symmetry<T>::operator()(ostream &os) const{
 	int flag = 1;
 	sort(zuobiao.begin(), zuobiao.end(), [](vector<T> v1, vector<T> v2)->bool {return *v1.begin() < *v2.begin(); });
 	T x_mean = (zuobiao[0][0] + zuobiao[zuobiao.size()-1][0]) / 2.0;

@@ -16,7 +16,8 @@
 //#include "Sleeping.h"
 //#include "Pga.h"
 //#include "Champ.h"
-#include "Symmetry.h"
+//#include "Symmetry.h"
+#include "Printer.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -36,8 +37,5 @@ using namespace std;
 int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\english.txt";
-	vector<vector<double>> m = { {5, 14}, {6, 10}, {5, 10}, {6, 14} };
-	shared_ptr<Symmetry<double>> sym = make_shared<Symmetry<double>>(m);
-	sym->operator()(cout);
 	return 0;
 }

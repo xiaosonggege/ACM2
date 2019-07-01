@@ -165,6 +165,7 @@
     <ClInclude Include="Morse.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Pga.h" />
+    <ClInclude Include="Printer.h" />
     <ClInclude Include="Puzzle.h" />
     <ClInclude Include="Quanpai.h" />
     <ClInclude Include="shexingtianshu.h" />

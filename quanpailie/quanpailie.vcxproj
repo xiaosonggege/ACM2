@@ -172,6 +172,7 @@
     <ClInclude Include="Sleeping.h" />
     <ClInclude Include="Squares.h" />
     <ClInclude Include="Symmetry.h" />
+    <ClInclude Include="Updating.h" />
     <ClInclude Include="Xiangqi.h" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +195,7 @@
     <ClCompile Include="Puzzle.cpp" />
     <ClCompile Include="Sleeping.cpp" />
     <ClCompile Include="Squares.cpp" />
+    <ClCompile Include="Updating.cpp" />
     <ClCompile Include="Xiangqi.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

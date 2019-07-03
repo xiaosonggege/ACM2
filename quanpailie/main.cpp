@@ -17,7 +17,8 @@
 //#include "Pga.h"
 //#include "Champ.h"
 //#include "Symmetry.h"
-#include "Printer.h"
+//#include "Printer.h"
+#include "Updating.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -36,6 +37,8 @@
 using namespace std;
 int main()
 {
-	const string p = "C:\\Users\\xiaosong\\Desktop\\english.txt";
+	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
+	shared_ptr<Updating> u = make_shared<Updating>(p);
+	u->operator()(cout);
 	return 0;
 }

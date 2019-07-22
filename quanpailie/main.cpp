@@ -18,7 +18,8 @@
 //#include "Champ.h"
 //#include "Symmetry.h"
 //#include "Printer.h"
-#include "Updating.h"
+//#include "Updating.h"
+#include "Fibonacci.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -37,8 +38,9 @@
 using namespace std;
 int main()
 {
-	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
-	shared_ptr<Updating> u = make_shared<Updating>(p);
-	u->operator()(cout);
+	//const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
+	shared_ptr<Fibonacci> f = make_shared<Fibonacci>();
+	int num = (*f)(1, 1);
+	cout << num << endl;
 	return 0;
 }

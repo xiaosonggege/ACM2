@@ -159,6 +159,7 @@
     <ClInclude Include="compare.h" />
     <ClInclude Include="CrossWord.h" />
     <ClInclude Include="Dolequeue.h" />
+    <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="Finding.h" />
     <ClInclude Include="Hangman.h" />
     <ClInclude Include="Light.h" />

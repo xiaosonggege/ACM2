@@ -159,6 +159,7 @@
     <ClInclude Include="compare.h" />
     <ClInclude Include="CrossWord.h" />
     <ClInclude Include="Dolequeue.h" />
+    <ClInclude Include="DropingBalls.h" />
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="Finding.h" />
     <ClInclude Include="Hangman.h" />
@@ -173,6 +174,7 @@
     <ClInclude Include="Sleeping.h" />
     <ClInclude Include="Squares.h" />
     <ClInclude Include="Symmetry.h" />
+    <ClInclude Include="Tree.h" />
     <ClInclude Include="Updating.h" />
     <ClInclude Include="Xiangqi.h" />
   </ItemGroup>
@@ -182,6 +184,7 @@
     <ClCompile Include="Coding.cpp" />
     <ClCompile Include="compare.cpp" />
     <ClCompile Include="CrossWord.cpp" />
+    <ClCompile Include="DropingBalls.cpp" />
     <ClCompile Include="Finding.cpp" />
     <ClCompile Include="Hangman.cpp" />
     <ClCompile Include="Morse.cpp" />
@@ -196,6 +199,7 @@
     <ClCompile Include="Puzzle.cpp" />
     <ClCompile Include="Sleeping.cpp" />
     <ClCompile Include="Squares.cpp" />
+    <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Updating.cpp" />
     <ClCompile Include="Xiangqi.cpp" />
   </ItemGroup>

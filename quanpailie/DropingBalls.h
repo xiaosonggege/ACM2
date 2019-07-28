@@ -17,7 +17,8 @@ public:
 	DropingBalls(DropingBalls &&);
 	DropingBalls & operator=(const DropingBalls &);
 	DropingBalls & operator=(DropingBalls &&);
-
+	int number(); //返回最后一个小球到达的叶子结点编号
+	int sporting(Tree *); //模仿单个小球运动时各个结点的动作
 };
 #endif // !DROPINGBALLS_H
 

@@ -7,8 +7,8 @@ class Tree {
 public:
 	int kaiguan = 0; //开关起始状态是关闭的
 	int num; //结点序号
-	shared_ptr<Tree> left = nullptr; //左子树空指针
-	shared_ptr<Tree> right = nullptr; //右子树空指针
+	Tree *left = nullptr; //左子树空指针
+	Tree *right = nullptr; //右子树空指针
 	Tree() = default;
 	Tree(const int &);
 	Tree(const Tree &);

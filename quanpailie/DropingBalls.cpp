@@ -39,3 +39,33 @@ DropingBalls & DropingBalls::operator=(DropingBalls &&d) {
 	d.count_ball = 0;
 	return *this;
 }
+int DropingBalls::number() {
+	//建立二叉树
+	int i = 1; //记录叶子结点绑定所在的位置
+	for (auto iter = tree_points.begin(); iter != tree_points.end(); ++iter) {
+		if (i != pow(2, max_deep)-1) {
+			iter->left = &tree_points[i];
+			++i;
+			iter->right = &tree_points[i];
+			++i;
+		}
+		else break;
+	}
+	Tree *root = &tree_points[0];
+	//构建小球依次向下运动模型
+	int finally_num;
+	for (int n = 0; n != this->count_ball; ++n) finally_num = this->sporting(root);
+	return finally_num;
+}
+int DropingBalls::sporting(Tree *node) {
+	if (!node->kaiguan) { //如果当前结点开关关闭
+		node->change_kaiguan();
+		if (node->left) return sporting(node->left);
+		else return node->num;
+	}
+	else {
+		node->change_kaiguan();
+		if (node->right) return sporting(node->right);
+		else return node->num;
+	}
+}

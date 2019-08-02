@@ -165,6 +165,7 @@
     <ClInclude Include="Hangman.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Morse.h" />
+    <ClInclude Include="NoMobile.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Pga.h" />
     <ClInclude Include="Printer.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="Sleeping.h" />
     <ClInclude Include="Squares.h" />
     <ClInclude Include="Symmetry.h" />
+    <ClInclude Include="Tnode.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Updating.h" />
     <ClInclude Include="Xiangqi.h" />
@@ -188,6 +190,7 @@
     <ClCompile Include="Finding.cpp" />
     <ClCompile Include="Hangman.cpp" />
     <ClCompile Include="Morse.cpp" />
+    <ClCompile Include="NoMobile.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -199,6 +202,7 @@
     <ClCompile Include="Puzzle.cpp" />
     <ClCompile Include="Sleeping.cpp" />
     <ClCompile Include="Squares.cpp" />
+    <ClCompile Include="Tnode.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Updating.cpp" />
     <ClCompile Include="Xiangqi.cpp" />

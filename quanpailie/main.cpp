@@ -20,8 +20,10 @@
 //#include "Printer.h"
 //#include "Updating.h"
 //#include "Fibonacci.h"
-#include "Tree.h"
-#include "DropingBalls.h"
+//#include "Tree.h"
+//#include "DropingBalls.h"
+#include "NoMobile.h"
+#include "Tnode.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -41,17 +43,6 @@ using namespace std;
 int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
-	ifstream ifstrm;
-	ifstrm.open(p, ios::in);
-	string s;
-	while (getline(ifstrm, s)) {
-		istringstream istr(s);
-		int D, count;
-		istr >> D >> count;
-		shared_ptr<DropingBalls> d = make_shared<DropingBalls>(D, count);
-		int finally_num = d->number();
-		cout << finally_num << endl;
-	}
-	ifstrm.close();
+	shared_ptr<NoMobile> n_p = make_shared<NoMobile>(p);
 	return 0;
 }

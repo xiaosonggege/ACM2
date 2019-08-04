@@ -5,6 +5,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <iterator>
 using namespace std;
 NoMobile::NoMobile(const string &ps) : p(ps) {
 	//读文件
@@ -15,13 +16,17 @@ NoMobile::NoMobile(const string &ps) : p(ps) {
 		istringstream istr(s);
 		int w1, d1, w2, d2;
 		istr >> w1 >> d1 >> w2 >> d2;
-		this->tns.emplace_back(w1, d1, w2, d2);
+		this->tns.emplace_back(d1, d2, w1, w2);
 	}
 	ifstrm.close();
 	//建立二叉树
-
+	this->root = &(*this->tns.begin());
+	int pos = 1;
+	this->build(this->root, pos);
 	//计算所有节点total
+	this->total_calc(this->root);
 	//判断
+
 }
 NoMobile::~NoMobile() {}
 NoMobile::NoMobile(const NoMobile &n) {
@@ -55,4 +60,22 @@ NoMobile & NoMobile::operator=(NoMobile &&n) {
 ostream & NoMobile::judge(ostream &os) const {
 
 	return os;
+}
+int NoMobile::build(Tnode *t, int &pos) {
+	if (t->W1 == 0) {
+		t->lchild = &tns[pos];
+		this->build(t->lchild, ++pos);
+	}
+	if (t->W2 == 0) {
+		t->rchild = &tns[pos];
+		this->build(t->rchild, ++pos);
+	}
+	return 0;
+}
+int NoMobile::total_calc(Tnode *t) {
+	if (t->W1 && t->W2) t->total = t->W1 + t->W2;
+	else if (t->W1 && (!t->W2)) t->total = t->W1 + this->total_calc(t->lchild);
+	else if ((!t->W1) && t->W2) t->total = this->total_calc(t->rchild) + t->W2;
+	else t->total = this->total_calc(t->lchild) + this->total_calc(t->rchild);
+	return t->total;
 }

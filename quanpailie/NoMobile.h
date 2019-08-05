@@ -21,5 +21,6 @@ public:
 	ostream & judge(ostream &) const;
 	int build(Tnode *, int &); //根据节点序列递归建立二叉树
 	int total_calc(Tnode *); //从根节点开始递归计算所有节点的total属性值
+	int judge_r(Tnode *) const; //判断天平是否平衡
 };
 #endif // !NOMOBILE_H

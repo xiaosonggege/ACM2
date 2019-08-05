@@ -25,8 +25,6 @@ NoMobile::NoMobile(const string &ps) : p(ps) {
 	this->build(this->root, pos);
 	//计算所有节点total
 	this->total_calc(this->root);
-	//判断
-
 }
 NoMobile::~NoMobile() {}
 NoMobile::NoMobile(const NoMobile &n) {
@@ -58,7 +56,8 @@ NoMobile & NoMobile::operator=(NoMobile &&n) {
 	return *this;
 }
 ostream & NoMobile::judge(ostream &os) const {
-
+	int flag = this->judge_r(this->root);
+	os << "天平的状态是:" << flag << endl;
 	return os;
 }
 int NoMobile::build(Tnode *t, int &pos) {
@@ -78,4 +77,21 @@ int NoMobile::total_calc(Tnode *t) {
 	else if ((!t->W1) && t->W2) t->total = this->total_calc(t->rchild) + t->W2;
 	else t->total = this->total_calc(t->lchild) + this->total_calc(t->rchild);
 	return t->total;
+}
+int NoMobile::judge_r(Tnode *t) const{
+	int flag = 1;
+	if (t->lchild) {
+		 flag = judge_r(t->lchild);
+		 if (flag == 0) return flag;
+	}
+	if (t->rchild) {
+		flag = judge_r(t->rchild);
+		if (flag == 0) return flag;
+	}
+	int l, r;
+	if (t->W1) l = t->W1;
+	else l = t->lchild->total;
+	if (t->W2) r = t->W2;
+	else r = t->rchild->total;
+	return (l * (t->D1) == r * (t->D2));
 }

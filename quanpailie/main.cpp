@@ -44,5 +44,6 @@ int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
 	shared_ptr<NoMobile> n_p = make_shared<NoMobile>(p);
+	n_p->judge(cout);
 	return 0;
 }

@@ -93,6 +93,12 @@
     <ClInclude Include="NoMobile.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Node2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Fallingleaves.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -153,6 +159,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="NoMobile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Node2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Fallingleaves.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

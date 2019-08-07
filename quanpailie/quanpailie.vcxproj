@@ -160,11 +160,13 @@
     <ClInclude Include="CrossWord.h" />
     <ClInclude Include="Dolequeue.h" />
     <ClInclude Include="DropingBalls.h" />
+    <ClInclude Include="Fallingleaves.h" />
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="Finding.h" />
     <ClInclude Include="Hangman.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Morse.h" />
+    <ClInclude Include="Node2.h" />
     <ClInclude Include="NoMobile.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Pga.h" />
@@ -187,9 +189,11 @@
     <ClCompile Include="compare.cpp" />
     <ClCompile Include="CrossWord.cpp" />
     <ClCompile Include="DropingBalls.cpp" />
+    <ClCompile Include="Fallingleaves.cpp" />
     <ClCompile Include="Finding.cpp" />
     <ClCompile Include="Hangman.cpp" />
     <ClCompile Include="Morse.cpp" />
+    <ClCompile Include="Node2.cpp" />
     <ClCompile Include="NoMobile.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -22,8 +22,10 @@
 //#include "Fibonacci.h"
 //#include "Tree.h"
 //#include "DropingBalls.h"
-#include "NoMobile.h"
-#include "Tnode.h"
+//#include "NoMobile.h"
+//#include "Tnode.h"
+#include "Node2.h"
+#include "Fallingleaves.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -43,7 +45,6 @@ using namespace std;
 int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
-	shared_ptr<NoMobile> n_p = make_shared<NoMobile>(p);
-	n_p->judge(cout);
+	shared_ptr<Fallingleaves> f = make_shared<Fallingleaves>(p);
 	return 0;
 }

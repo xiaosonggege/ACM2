@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <map>
 using namespace std;
 class Fallingleaves {
 private:
@@ -19,5 +20,7 @@ public:
 	Fallingleaves & operator=(const Fallingleaves &);
 	Fallingleaves & operator=(Fallingleaves &&);
 	int built(shared_ptr<Node2> , int &pos, const vector<int> &v, int flag);
+	ostream & print(ostream &);
+	int xianxu(shared_ptr<Node2>, map<int, int> &);
 };
 #endif // !FALLINGLEAVES_H

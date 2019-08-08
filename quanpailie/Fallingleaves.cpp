@@ -8,6 +8,7 @@
 #include <map>
 #include <iterator>
 #include <memory>
+#include <utility>
 using namespace std;
 Fallingleaves::Fallingleaves(const string &ps) : p(ps) {
 	ifstream ifstrm;
@@ -59,5 +60,20 @@ int Fallingleaves::built(shared_ptr<Node2> n, int &pos, const vector<int> &v, in
 			built(n->r, pos, v, ++flag);
 		}
 	}
+	return 0;
+}
+ostream & Fallingleaves::print(ostream &os) {
+	map<int, int> pos_value;
+	xianxu(this->root, pos_value);
+	for (auto iter = pos_value.cbegin(); iter != pos_value.cend(); ++iter)
+		os << iter->second << " ";
+	os << endl;
+	return os;
+}
+int Fallingleaves::xianxu(shared_ptr<Node2> n, map<int, int> &m) {
+	auto pairr = m.insert({ n->pos, n->value });
+	if (!pairr.second) pairr.first->second += n->value;
+	if (n->l) xianxu(n->l, m);
+	if (n->r) xianxu(n->r, m);
 	return 0;
 }

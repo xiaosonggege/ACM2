@@ -46,5 +46,6 @@ int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
 	shared_ptr<Fallingleaves> f = make_shared<Fallingleaves>(p);
+	f->print(cout);
 	return 0;
 }

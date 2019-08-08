@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Node2.h"
 using namespace std;
-Node2::Node2(const int &values, Node2 *ls, Node2 *rs) : 
+Node2::Node2(const int &values, shared_ptr<Node2> ls, shared_ptr<Node2> rs) :
 	value(values), l(ls), r(rs) {}
 Node2::~Node2() {}
 Node2::Node2(const Node2 &n) {

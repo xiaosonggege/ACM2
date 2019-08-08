@@ -10,7 +10,7 @@ public:
 	shared_ptr<Node2> l = nullptr;
 	shared_ptr<Node2> r = nullptr;
 	Node2() = default;
-	Node2(const int &values, Node2 *ls = nullptr, Node2 *rs = nullptr);
+	Node2(const int &values, shared_ptr<Node2> ls = nullptr, shared_ptr<Node2> rs = nullptr);
 	~Node2();
 	Node2(const Node2 &);
 	Node2(Node2 &&);

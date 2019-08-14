@@ -99,6 +99,12 @@
     <ClInclude Include="Fallingleaves.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Treef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Quadtree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -165,6 +171,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Fallingleaves.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Treef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Quadtree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

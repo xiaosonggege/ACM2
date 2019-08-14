@@ -172,6 +172,7 @@
     <ClInclude Include="Pga.h" />
     <ClInclude Include="Printer.h" />
     <ClInclude Include="Puzzle.h" />
+    <ClInclude Include="Quadtree.h" />
     <ClInclude Include="Quanpai.h" />
     <ClInclude Include="shexingtianshu.h" />
     <ClInclude Include="Sleeping.h" />
@@ -179,6 +180,7 @@
     <ClInclude Include="Symmetry.h" />
     <ClInclude Include="Tnode.h" />
     <ClInclude Include="Tree.h" />
+    <ClInclude Include="Treef.h" />
     <ClInclude Include="Updating.h" />
     <ClInclude Include="Xiangqi.h" />
   </ItemGroup>
@@ -204,10 +206,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pga.cpp" />
     <ClCompile Include="Puzzle.cpp" />
+    <ClCompile Include="Quadtree.cpp" />
     <ClCompile Include="Sleeping.cpp" />
     <ClCompile Include="Squares.cpp" />
     <ClCompile Include="Tnode.cpp" />
     <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="Treef.cpp" />
     <ClCompile Include="Updating.cpp" />
     <ClCompile Include="Xiangqi.cpp" />
   </ItemGroup>

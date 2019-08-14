@@ -24,8 +24,9 @@
 //#include "DropingBalls.h"
 //#include "NoMobile.h"
 //#include "Tnode.h"
-#include "Node2.h"
-#include "Fallingleaves.h"
+//#include "Node2.h"
+//#include "Fallingleaves.h"
+#include "Quadtree.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -45,7 +46,7 @@ using namespace std;
 int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
-	shared_ptr<Fallingleaves> f = make_shared<Fallingleaves>(p);
-	f->print(cout);
+	shared_ptr<Quadtree> q = make_shared<Quadtree>(p);
+
 	return 0;
 }

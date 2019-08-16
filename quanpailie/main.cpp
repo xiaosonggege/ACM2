@@ -47,6 +47,6 @@ int main()
 {
 	const string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
 	shared_ptr<Quadtree> q = make_shared<Quadtree>(p);
-
+	q->calc(cout);
 	return 0;
 }
